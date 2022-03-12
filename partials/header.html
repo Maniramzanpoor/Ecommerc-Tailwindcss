@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header</title>
+    <link rel="stylesheet" href="../build/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="bg-black">
+   <!-- header -->
+   <header class="flex flex-row items-center justify-around w-full h-14 bg-Black text-White">
+    <button class="Collaps lg:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+      </svg>
+    </button>
+    <div class="flex flex-row">
+      <a href="#">
+        <img src="../content/svg/razer-ths-logo.svg" class="w-12 h-12" />
+      </a>
+    </div>
+    <div class="hidden lg:block">
+      <ul class="flex flex-row font-medium">
+        <li class="text-Primary">PC</li>
+        <li class="ml-12 hover:text-Primary">Consol</li>
+        <li class="ml-12 hover:text-Primary">Mobile</li>
+        <li class="ml-12 hover:text-Primary">Consol</li>
+        <li class="ml-12 hover:text-Primary">Life</li>
+        <li class="ml-12 hover:text-Primary">Networking</li>
+        <li class="ml-12 hover:text-Primary">Monitor</li>
+      </ul>
+    </div>
+    <!-- header icon for account and store -->
+    <div class="relative flex" x-data="{ open: false }">
+      <a href="#" class="mx-3">
+        <button class="" @click="open = !open">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </button>
+      </a>
+      <ul class="absolute w-56 my-10 text-center border-4 rounded-md shadow-lg border-darkgray -right-6 bg-solidBlack text-Gray" x-show="open">
+        <li>
+          <a href="#" class="block px-3 py-3 hover:text-Primary">Setting</a>
+        </li>
+        <hr class="mx-4" />
+
+        <li>
+          <a href="#" class="block px-5 py-3 hover:text-Primary">Account </a>
+        </li>
+        <hr class="mx-4" />
+
+        <li>
+          <a href="#" class="block px-3 py-3 hover:text-Primary">Rewards </a>
+        </li>
+        <hr class="mx-4" />
+        <li>
+          <a href="#" class="block px-3 py-3 hover:text-Primary">Order</a>
+        </li>
+        <hr class="mx-4" />
+        <li>
+          <a href="./Singin.html" class="block px-3 py-3 hover:text-Primary"> LogIn</a>
+        </li>
+      </ul>
+      <a href="#" class="mx-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+      </a>
+  </header>
+  <!-- SideBar -->
+  <nav
+    class="flex flex-col w-1/2 h-screen duration-500 delay-200 -translate-x-full sidebar rounded-r-2xl bg-darkgray lg:hidden">
+    <div class="flex flex-col justify-center my-5">
+      <input type="text" placeholder="search.."
+        class="p-1 mx-3 rounded-md bg-solidBlack text-Gray focus:outline focus:outline-Primary" />
+      <ul class="flex flex-col mx-auto my-5 font-medium text-center">
+        <li class="my-1 text-Primary">PC</li>
+        <li class="my-1 text-Primary">Consol</li>
+        <li class="my-1 text-Primary">Mobile</li>
+        <li class="my-1 text-Primary">Consol</li>
+        <li class="my-1 text-Primary">Life</li>
+        <li class="my-1 text-Primary">Networking</li>
+        <li class="my-1 text-Primary">Monitor</li>
+      </ul>
+    </div>
+    <img src="../content/svg/razer-ths-logo.svg" class="h-full mx-auto mb-10 w-36" />
+    <h1 class="mx-auto mb-10 text-xs text-Primary md:text-xl">
+      by Gamers.For Gamers.
+    </h1>
+  </nav>
+    <script src="../js/main.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: ROGfont;
+  src: url("../content/font/batmfa__.ttf");
+}
+body,
+html {
+  font-family: Rogfont;
+}
